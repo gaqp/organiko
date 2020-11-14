@@ -1,0 +1,19 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+
+#User Routes
+GET     /api/user                       controllers.UserController.index
+GET     /api/user/:id                   controllers.UserController.find(id: Long)
+POST    /api/user                       controllers.UserController.create(request: play.mvc.Http.Request)
+
+#Product Routes
+GET     /api/product                    controllers.ProductController.index
+POST    /api/product                    controllers.ProductController.create(request: play.mvc.Http.Request)
+GET     /api/product/:id                controllers.ProductController.find(id: Long)  
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
