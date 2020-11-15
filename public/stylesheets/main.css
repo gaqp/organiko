@@ -4,18 +4,26 @@
 }
 
 nav#navbar {
-    background-color: rgba(0, 216, 79, 0.35);
+    background-color: #A6F1C2;
     box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.25);
 }
 
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
 img.navLogo {
-    width: 130px;
-    height: 95px;
+    width: 115px;
+    height: 50px;
 }
 
 a.nav-link {
     font-size: x-large;
     font-weight: 600;
+}
+
+div#landingPage {
+    padding-top: 82px;
 }
 
 div#aboutUsContainer {
@@ -31,26 +39,64 @@ div#aboutUsContainer {
 }
 
 span.genericHeader {
-    font-size: 4rem;
+    font-size: 3rem;
+    margin-bottom: 20px;
     align-self: center;
 }
 
 span.genericText {
-    font-size: 2rem;
-    max-width: 95%;
-    margin-bottom:550px
+    font-size: 1.5rem;
+    max-width: 800px;
+    align-self: center;
+    margin-bottom: 350px
 }
 
-div#aboutUsText {
+@media only screen and (max-width: 600px) {
+    span.genericText {
+        margin-bottom: 200px;
+    }
+}
+
+div.containerText {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
 }
 
 div#servicesContainer {
     min-height: 80vh;
     height: fit-content;
     background-color: aquamarine;
+}
+
+div#servicesContainer>#cardHolder {
+    min-height: 300px;
+    width: 85%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    background-color: red;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+div.card {
+    width: 18rem;
+}
+
+div.card:hover {
+    -webkit-box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.75);
+    transition-duration: 0.5s;
+}
+
+div.card>img {
+    width: 286px;
+    height: 250px;
+    align-self: center;
 }
 
 div#results {

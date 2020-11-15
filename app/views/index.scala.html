@@ -1,8 +1,7 @@
 @()
 
 @main("Organiko") {
-<div id="landingPage">
-  <nav id="navbar" class="navbar navbar-expand-md navbar-light">
+  <nav id="navbar" class="navbar smart-scroll  fixed-top navbar-expand-md navbar-light">
     <a class="navbar-brand" href="#">
       <img class="navLogo" src="@routes.Assets.versioned("images/logo.png")" alt="Organiko Logo">
     </a>
@@ -14,23 +13,27 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" href="#">Quem somos<span
+          <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" href="#aboutUsContainer">Quem somos<span
               class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" href="#">Nossos serviços</a>
+          <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" href="#servicesContainer">Nossos serviços</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" href="#">Fale Conosco</a>
+          <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" href="#results">Resultados</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" href="#contact">Fale Conosco</a>
         </li>
       </ul>
     </div>
   </nav>
+<div id="landingPage">
   <div class="container-fluid" id="aboutUsContainer">
-    <div id="aboutUsText">
+    <div class="containerText">
       <span class="genericHeader">Quem somos?</span>
       <span class="genericText">
-        A organika tem como objetivo incentivar a produção e 
+        A organika tem como principal objetivo incentivar a produção e 
         consumo de alimentos orgânicos, oriundos de agricultura 
         familiar, oferecendo capacitação, apoio e material para nossos 
         clientes
@@ -38,11 +41,24 @@
     </div>
   </div>
   <div class="container-fluid" id="servicesContainer">
-    <span>Nossos serviços</span>
+    <div class="containerText">
+    <span class="genericHeader">Nossos serviços</span>
+  </div>
+    <div id=cardHolder>
+      <div class="card" style="display:none;">
+        <img class="card-img-top" src="..." alt="this is an example card, and should be hidden">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">card description</p>
+          <a href="#" class="btn btn-primary">card button</a>
+        </div>
+      </div>
 
+    </div>
   </div>
   <div class="container-fluid" id="results">
     <span>Dados estatísticos</span>
+    <canvas id="myChart"></canvas>
   </div>
   <div class="container-fluid" id="contact">
     <span>Contato</span>

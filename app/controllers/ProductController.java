@@ -15,7 +15,9 @@ public class ProductController extends Controller {
     private ArrayList<ProductModel> DB = new ArrayList<ProductModel>();
 
     public ProductController() {
-        DB.add(new ProductModel("Pacote básico", "Pacote mais simples, alimenta até 10 pessoas", "https://w1.pngwing.com/pngs/466/143/png-transparent-vegetables-greens-vegetarian-cuisine-fruit-food-fruit-vegetable-smoothie-organic-food-thumbnail.png"));
+        DB.add(new ProductModel("Pacote básico", "Pacote mais simples com videoaulas, sementes e adubo, Pode produzir até 10Kg.", "/assets/images/legumes.png"));
+        DB.add(new ProductModel("Pacote intermediário", "Pacote intermediário, com videoaulas, sementes, adubo e suporte profissional, pode produzir até 50Kg,","/assets/images/caixa_vegetais.png"));
+        DB.add(new ProductModel("Pacote agricultor","Pacote completo, com videoaulas, sementes, adubo e suporte profissional 24h, pode produzir até 500Kg","/assets/images/caixa-frutas.png"));
     }
 
     /**
