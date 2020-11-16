@@ -79,6 +79,7 @@ div#aboutUsContainer {
 @media only screen and (max-width: 900px) {
     div#aboutUsContainer {
         min-height: 500px;
+        padding-bottom: 75px;
     }
 }
 
@@ -222,8 +223,26 @@ form {
     width: 800px;
     max-width: 90vw;
     padding: 25px;
+    margin-bottom: 20px;
 }
 
+#messageBox {
+    display:none;
+    background-color: #FAFAFA;
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    width: 800px;
+    max-width: 90vw;
+    padding: 25px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#messageBox>img{
+    max-width: 450px;
+    padding:25px;
+}
 label {
     font-size: large;
     font-weight: 700;

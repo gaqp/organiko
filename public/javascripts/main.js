@@ -36,11 +36,19 @@ $('button#goBack').on('click', function (e) {
   if ($('form').css("display") === "none") {
     $('form').css("display", "block")
     $('#contactUs').css("display", 'none')
+    $('#messageBox').css("display", 'none')
+
   } else {
     $('form').css("display", "none")
     $('#contactUs').css("display", 'flex')
+    $('#messageBox').css("display", 'none')
   }
 })
+function showSuccess(e) {
+  $('form').css("display", "none")
+  $('#contactUs').css("display", 'none')
+  $('#messageBox').css("display", 'flex')
+}
 $('form').on('submit', function (e) {
   e.preventDefault();
 
@@ -52,8 +60,9 @@ $('form').on('submit', function (e) {
     url: "/api/message",
     data: JSON.stringify({ name: name, email: email, message: message }),
     contentType: "application/json",
-    dataType:'json',
-    success: console.log("Mensagem enviada!")
+    dataType: 'json',
+    success: showSuccess
+
   });
   console.log(name, email, message);
 
