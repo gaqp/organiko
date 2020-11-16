@@ -72,7 +72,7 @@ div#aboutUsContainer {
 }
 @media only screen and (max-width: 900px) {
     div#aboutUsContainer {
-        min-height: 400px;
+        min-height: 500px;
     }
 }
 
@@ -141,6 +141,7 @@ div#results {
     flex-direction: column;
 }
 div#results>canvas#grafico{
+    margin-top: 25px;
     max-width: 800px;
     max-height: 800px;
     align-self: center;
@@ -208,6 +209,10 @@ form{
     width: 800px;
     max-width: 90vw;
     padding: 25px;
+}
+label{
+    font-size: large;
+    font-weight: 700;
 }
 div#formButtons{
     display:flex;

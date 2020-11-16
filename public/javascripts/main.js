@@ -53,7 +53,8 @@ $('form').on('submit', function (e) {
     url: "/api/message",
     data: JSON.stringify({ name: name, email: email, message: message }),
     contentType: "application/json",
-    dataType:'json'
+    dataType:'json',
+    success: console.log("Mensagem enviada!")
   });
   console.log(name, email, message);
 
