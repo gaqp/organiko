@@ -3,7 +3,7 @@ package controllers;
 import java.util.ArrayList;
 import play.mvc.*;
 import play.libs.Json;
-import models.UserModel;
+import models.MessageModel;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
@@ -11,8 +11,8 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
  * This controller contains an action to handle HTTP requests to the
  * application's home page.
  */
-public class UserController extends Controller {
-    private ArrayList<UserModel> DB = new ArrayList<UserModel>();
+public class MessageController extends Controller {
+    private ArrayList<MessageModel> DB = new ArrayList<MessageModel>();
 
     /**
      * An action that renders an HTML page with a welcome message. The configuration
@@ -28,18 +28,19 @@ public class UserController extends Controller {
     @BodyParser.Of(BodyParser.Json.class)
     public Result create(Http.Request request) {
         JsonNode json = request.body().asJson();
-        String nome = json.findPath("nome").textValue();
-        if (nome != null && !nome.equals("")) {
+        String name = json.findPath("name").textValue();
+        if (name != null && !name.equals("")) {
             String email = json.findPath("email").textValue();
             if (email != null && !email.equals("")) {
-                String password = json.findPath("password").textValue();
-                if (password != null && !password.equals("")) {
-                    DB.add(new UserModel(nome, email, password));
+                String message = json.findPath("message").textValue();
+                if (message != null && !message.equals("")) {
+                    DB.add(new MessageModel(name, email, message));
+                    System.out.println("Nova mensagem recebida de: "+name);
                     return ok(json);
                 }
             }
         }
-        return ok("Conta não criada");
+        return badRequest();
     }
 
     public Result find(Long id) {

@@ -6,9 +6,10 @@
 GET     /                           controllers.HomeController.index
 
 #User Routes
-GET     /api/user                       controllers.UserController.index
-GET     /api/user/:id                   controllers.UserController.find(id: Long)
-POST    /api/user                       controllers.UserController.create(request: play.mvc.Http.Request)
+GET     /api/message                       controllers.MessageController.index
+GET     /api/message/:id                   controllers.MessageController.find(id: Long)
++ nocsrf
+POST    /api/message                       controllers.MessageController.create(request: play.mvc.Http.Request)
 
 #Product Routes
 GET     /api/product                    controllers.ProductController.index

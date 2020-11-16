@@ -70,7 +70,7 @@ div#aboutUsContainer {
     background-size: contain;
     min-height: 800px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
     div#aboutUsContainer {
         min-height: 400px;
     }
@@ -98,7 +98,7 @@ div.containerText {
 div#servicesContainer {
     min-height: 80vh;
     height: fit-content;
-    background-color: #FAFAFA;
+    background-color: rgba(68, 175, 105,0.25);
 }
 
 div#servicesContainer>#cardHolder {
@@ -116,6 +116,7 @@ div#servicesContainer>#cardHolder {
 
 div.card {
     margin-bottom: 10px;
+    width: 18rem;
     margin-left: 10px;
     border-radius: 20px;
     object-fit: contain;
@@ -155,15 +156,21 @@ img#aboutUsImage {
 }
 
 div#contact {
+    display:flex;
+    justify-content: center;
     padding-top: 40px;
     min-height: 80vh;
     height: fit-content;
-    background-color: #FAFAFA;
+    background-color: rgba(68, 175, 105,0.25);
     background-image: url("../images/contact_background.png");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: contain;
    
+}
+div#contactUs{
+    display:flex;
+    flex-direction: column;
 }
 
 a.contactLink:hover{
@@ -187,9 +194,22 @@ a.contactLink{
     text-align: center;
     background-color: #FAFAFA;
 }
+a.contactLink:first-of-type{
+    margin-top: 40px;
+}
 a.contactLink>img{
     margin-right: auto;
 }
 form{
     display:none;
+    background-color: #FAFAFA;
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    width: 800px;
+    max-width: 90vw;
+    padding: 25px;
+}
+div#formButtons{
+    display:flex;
+    justify-content: space-between;
 }

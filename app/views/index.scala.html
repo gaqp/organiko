@@ -74,31 +74,35 @@
   <div class="container-fluid" id="contact">
     <div class="containerText">
       <span class="genericHeader">Contato</span>
-        <a class="contactLink" href="tel:+5581997399333">
+      <div id="contactUs">  
+      <a class="contactLink" href="tel:+5581997399333">
           <img src="@routes.Assets.versioned("images/call.svg")" alt="icone de chamada"/>
           Ligue para nós</a>
         <a class="contactLink"href="mailto:gaqp@@cin.ufpe.br">
           <img src="@routes.Assets.versioned("images/mail.svg")" alt="icone de email"/>
           Envie-nos um e-mail</a>
-        <a class="contactLink" href="#">
+        <a class="contactLink" href="/contato">
           <img src="@routes.Assets.versioned("images/message.svg")" alt="icone de mensagem"/>
-
           Envie-nos uma mensagem
         </a>
+    </div>
         <form>
         <div class="form-group">
           <label for="nameInput">Insira seu nome</label>
-          <input type="text" class="form-control" id="nameInput" placeholder="João da Silva"/>
+          <input type="text" class="form-control" id="nameInput" placeholder="João da Silva" required/>
         </div>
         <div class="form-group">
           <label for="emailInput">Insira seu endereço de e-mail</label>
-          <input type="email" class="form-control" id="emailInput" placeholder="exemplo@@dominio.com"/>
+          <input type="email" class="form-control" id="emailInput" placeholder="exemplo@@dominio.com" required/>
         </div>
         <div class="form-group">
           <label for="messageInput">O que você deseja falar?</label>
-          <textarea class="form-control" id="messageInput" rows="5"></textarea>
+          <textarea class="form-control" id="messageInput" rows="5" required></textarea>
         </div>
-        <button type="submit" id="sendMessage" class="btn btn-primary">Enviar</button>
+        <div id="formButtons">
+          <button id="goBack" class="btn btn-dark" onclick="changeMessageScreen()">Voltar</button>
+          <button type="submit" id="sendMessage" class="btn btn-primary">Enviar</button>
+        </div>
       </form>
     </div>
   </div>

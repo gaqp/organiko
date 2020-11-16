@@ -1,14 +1,14 @@
 package models;
 
-public class UserModel {
+public class MessageModel {
     private String nome;
     private String email;
-    private String password;
+    private String message;
 
-    public UserModel(String nome, String email, String password) {
+    public MessageModel(String nome, String email, String message) {
         this.nome = nome;
         this.email = email;
-        this.password = password;
+        this.message = message;
     }
 
     public boolean setNome(String nome) {
@@ -35,15 +35,15 @@ public class UserModel {
         return this.email;
     }
 
-    public boolean setPassword(String password) {
-        if (!password.equals("")) {
-            this.password = password;
+    public boolean setmessage(String message) {
+        if (!message.equals("")) {
+            this.message = message;
             return true;
         }
         return false;
     }
 
-    public String getPassword() {
-        return this.password;
+    public String getmessage() {
+        return this.message;
     }
 }

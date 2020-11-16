@@ -2,7 +2,6 @@ $('a[href^="#"]').on('click', function (e) {
   e.preventDefault();
   var id = $(this).attr('href'),
     targetOffset = $(id).offset().top;
-
   $('html, body').animate({
     scrollTop: targetOffset - 82
   }, 500);
@@ -12,7 +11,7 @@ $.get("api/product", function (data) {
   data.map((dados) => {
     $('#cardHolder').append(
       `
-      <div class="card" style="width: 18rem;">
+      <div class="card">
         <img class="card-img-top" src="${dados.imgUrl}" alt="Card image cap">
       <div class="card-body">
           <h5 class="card-title">${dados.title}</h5>
@@ -23,11 +22,41 @@ $.get("api/product", function (data) {
     )
   })
 })
-
+$('a[href^="/contato"]').on('click', function (e) {
+  e.preventDefault();
+  if ($('form').css("display") === "none") {
+    $('form').css("display", "block")
+    $('#contactUs').css("display", 'none')
+  } else {
+    $('form').css("display", "none")
+    $('#contactUs').css("display", 'flex')
+  }
+})
+$('button#goBack').on('click', function (e) {
+  e.preventDefault();
+  if ($('form').css("display") === "none") {
+    $('form').css("display", "block")
+    $('#contactUs').css("display", 'none')
+  } else {
+    $('form').css("display", "none")
+    $('#contactUs').css("display", 'flex')
+  }
+})
 $('form').on('submit', function (e) {
   e.preventDefault();
-  $("#emailInput").validate();
-  console.log($('#messageInput').val());
+
+  let name = $("#nameInput").val()
+  let email = $("#emailInput").val()
+  let message = $("#messageInput").val();
+  $.ajax({
+    type: "POST",
+    url: "/api/message",
+    data: JSON.stringify({ name: name, email: email, message: message }),
+    contentType: "application/json",
+    dataType:'json'
+  });
+  console.log(name, email, message);
+
 })
 function euclidianModule(a, b) {
   let m = a % b;
@@ -40,7 +69,6 @@ const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Jul
 var data = new Date();
 var nMes = data.getMonth();
 const lastSixMonths = [months[euclidianModule((nMes - 5), 12)], months[euclidianModule((nMes - 4), 12)], months[euclidianModule((nMes - 3), 12)], months[euclidianModule((nMes - 2), 12)], months[euclidianModule((nMes - 1), 12)], months[(nMes) % 12]];
-console.log(lastSixMonths);
 var ctx = document.getElementById('grafico').getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'bar',
