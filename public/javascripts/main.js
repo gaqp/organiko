@@ -1,12 +1,3 @@
-$('a[href^="#"]').on('click', function (e) {
-  e.preventDefault();
-  var id = $(this).attr('href'),
-    targetOffset = $(id).offset().top;
-  $('html, body').animate({
-    scrollTop: targetOffset - 82
-  }, 500);
-});
-
 $.get("api/product", function (data) {
   data.map((dados) => {
     $('#cardHolder').append(
@@ -16,11 +7,29 @@ $.get("api/product", function (data) {
       <div class="card-body">
           <h5 class="card-title">${dados.title}</h5>
           <p class="card-text">${dados.description}</p>
+          <button id="contact" onclick="scrollContactus()" class="btn btn-primary">Fale Conosco</button>
         </div>
       </div>`
     )
   })
 })
+
+function scrollContactus(e) {
+  $("html, body").animate({
+    scrollTop: $(document).height()
+  }, 500);
+
+}
+$('a[href^="#"]').on('click', function (e) {
+  e.preventDefault();
+  var id = $(this).attr('href'),
+    targetOffset = $(id).offset().top;
+  $('html, body').animate({
+    scrollTop: targetOffset - 82
+  }, 500);
+});
+
+
 $('a[href^="/contato"]').on('click', function (e) {
   e.preventDefault();
   if ($('form').css("display") === "none") {
