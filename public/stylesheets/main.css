@@ -103,7 +103,7 @@ div.containerText {
 div#servicesContainer {
     min-height: 80vh;
     height: fit-content;
-    background-color: rgba(68, 175, 105, 0.25);
+    background-color: rgba(134, 114, 53, 0.50);
 }
 
 div#servicesContainer>#cardHolder {
@@ -172,7 +172,7 @@ div#contact {
     padding-top: 40px;
     min-height: 80vh;
     height: fit-content;
-    background-color: rgba(68, 175, 105, 0.25);
+    background-color: rgb(218, 232, 207);
     background-image: url("../images/contact_background.png");
     background-position: bottom;
     background-repeat: no-repeat;
@@ -227,7 +227,7 @@ form {
 }
 
 #messageBox {
-    display:none;
+    display: none;
     background-color: #FAFAFA;
     box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
@@ -239,10 +239,12 @@ form {
     justify-content: center;
     align-items: center;
 }
-#messageBox>img{
-    max-width: 450px;
-    padding:25px;
+
+#messageBox>img {
+    max-width: 300px;
+    padding: 25px;
 }
+
 label {
     font-size: large;
     font-weight: 700;
