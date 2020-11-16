@@ -7,7 +7,7 @@ $.get("api/product", function (data) {
       <div class="card-body">
           <h5 class="card-title">${dados.title}</h5>
           <p class="card-text">${dados.description}</p>
-          <button id="contact" onclick="scrollContactus()" class="btn btn-primary">Fale Conosco</button>
+          <button id="contactButton" onclick="scrollContactus()" class="btn btn-primary">Fale Conosco</button>
         </div>
       </div>`
     )
