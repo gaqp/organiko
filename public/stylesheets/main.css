@@ -27,7 +27,8 @@ span.jumbotronLogo {
     margin-bottom: 20px;
     align-self: center;
 }
-span.jumbotronText{
+
+span.jumbotronText {
     font-size: 1.5rem;
     max-width: 800px;
     align-self: center;
@@ -37,6 +38,10 @@ span.jumbotronText{
 nav#navbar {
     background-color: #fdfdfd;
     box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-nav>li {
+    align-self: center;
 }
 
 .navbar .navbar-collapse {
@@ -70,12 +75,12 @@ div#aboutUsContainer {
     background-size: contain;
     min-height: 800px;
 }
+
 @media only screen and (max-width: 900px) {
     div#aboutUsContainer {
         min-height: 500px;
     }
 }
-
 
 span.genericHeader {
     font-size: 3rem;
@@ -89,7 +94,6 @@ span.genericText {
     align-self: center;
 }
 
-
 div.containerText {
     display: flex;
     flex-direction: column;
@@ -98,7 +102,7 @@ div.containerText {
 div#servicesContainer {
     min-height: 80vh;
     height: fit-content;
-    background-color: rgba(68, 175, 105,0.25);
+    background-color: rgba(68, 175, 105, 0.25);
 }
 
 div#servicesContainer>#cardHolder {
@@ -135,12 +139,17 @@ div.card>img {
     align-self: center;
 }
 
-div#results {   
+div#results {
     background-color: #FAFAFA;
-    display:flex;
+    display: flex;
     flex-direction: column;
+    background-image: url("../images/greenWaves.svg");
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-div#results>canvas#grafico{
+
+div#results>canvas#grafico {
     margin-top: 25px;
     max-width: 800px;
     max-height: 800px;
@@ -157,31 +166,32 @@ img#aboutUsImage {
 }
 
 div#contact {
-    display:flex;
+    display: flex;
     justify-content: center;
     padding-top: 40px;
     min-height: 80vh;
     height: fit-content;
-    background-color: rgba(68, 175, 105,0.25);
+    background-color: rgba(68, 175, 105, 0.25);
     background-image: url("../images/contact_background.png");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: contain;
-   
 }
-div#contactUs{
-    display:flex;
+
+div#contactUs {
+    display: flex;
     flex-direction: column;
 }
 
-a.contactLink:hover{
-    color:#000000;
+a.contactLink:hover {
+    color: #000000;
     text-decoration: none;
     border-color: #AFE3C0;
     transition-duration: 0.5s;
     background-color: #AFE3C0;
 }
-a.contactLink{
+
+a.contactLink {
     border-radius: 1px;
     border-style: solid;
     width: 300px;
@@ -195,14 +205,17 @@ a.contactLink{
     text-align: center;
     background-color: #FAFAFA;
 }
-a.contactLink:first-of-type{
+
+a.contactLink:first-of-type {
     margin-top: 40px;
 }
-a.contactLink>img{
+
+a.contactLink>img {
     margin-right: auto;
 }
-form{
-    display:none;
+
+form {
+    display: none;
     background-color: #FAFAFA;
     box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
@@ -210,11 +223,13 @@ form{
     max-width: 90vw;
     padding: 25px;
 }
-label{
+
+label {
     font-size: large;
     font-weight: 700;
 }
-div#formButtons{
-    display:flex;
+
+div#formButtons {
+    display: flex;
     justify-content: space-between;
 }

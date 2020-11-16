@@ -16,7 +16,6 @@ $.get("api/product", function (data) {
       <div class="card-body">
           <h5 class="card-title">${dados.title}</h5>
           <p class="card-text">${dados.description}</p>
-          <a href="#" class="btn btn-primary">Saiba Mais</a>
         </div>
       </div>`
     )
