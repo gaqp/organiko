@@ -3,8 +3,39 @@
     padding: 0;
 }
 
+div.jumbotron {
+    background-image: url("../images/jumbo.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: fit-content;
+    margin-bottom: 0;
+}
+
+div.jumbotron>div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    max-height: 70vh;
+}
+
+span.jumbotronLogo {
+    font-size: 3rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    align-self: center;
+}
+span.jumbotronText{
+    font-size: 1.5rem;
+    max-width: 800px;
+    align-self: center;
+    text-align: center;
+}
+
 nav#navbar {
-    background-color: #A6F1C2;
+    background-color: #fdfdfd;
     box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.25);
 }
 
@@ -23,7 +54,8 @@ a.nav-link {
 }
 
 div#landingPage {
-    padding-top: 82px;
+    overflow-x: hidden;
+    padding-top: 75px;
 }
 
 div#aboutUsContainer {
@@ -36,7 +68,14 @@ div#aboutUsContainer {
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: contain;
+    min-height: 800px;
 }
+@media only screen and (max-width: 600px) {
+    div#aboutUsContainer {
+        min-height: 400px;
+    }
+}
+
 
 span.genericHeader {
     font-size: 3rem;
@@ -48,14 +87,8 @@ span.genericText {
     font-size: 1.5rem;
     max-width: 800px;
     align-self: center;
-    margin-bottom: 350px
 }
 
-@media only screen and (max-width: 600px) {
-    span.genericText {
-        margin-bottom: 200px;
-    }
-}
 
 div.containerText {
     display: flex;
@@ -65,7 +98,7 @@ div.containerText {
 div#servicesContainer {
     min-height: 80vh;
     height: fit-content;
-    background-color: aquamarine;
+    background-color: #FAFAFA;
 }
 
 div#servicesContainer>#cardHolder {
@@ -75,7 +108,6 @@ div#servicesContainer>#cardHolder {
     margin-left: auto;
     margin-right: auto;
     height: fit-content;
-    background-color: red;
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
@@ -83,7 +115,10 @@ div#servicesContainer>#cardHolder {
 }
 
 div.card {
-    width: 18rem;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    object-fit: contain;
 }
 
 div.card:hover {
@@ -94,15 +129,22 @@ div.card:hover {
 }
 
 div.card>img {
-    width: 286px;
-    height: 250px;
+    max-width: 286px;
+    max-height: 250px;
     align-self: center;
 }
 
-div#results {
-    min-height: 80vh;
-    height: fit-content;
-    background-color: rebeccapurple;
+div#results {   
+    background-color: #FAFAFA;
+    display:flex;
+    flex-direction: column;
+}
+div#results>canvas#grafico{
+    max-width: 800px;
+    max-height: 800px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 img#aboutUsImage {
@@ -113,7 +155,41 @@ img#aboutUsImage {
 }
 
 div#contact {
+    padding-top: 40px;
     min-height: 80vh;
     height: fit-content;
-    background-color: turquoise;
+    background-color: #FAFAFA;
+    background-image: url("../images/contact_background.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+   
+}
+
+a.contactLink:hover{
+    color:#000000;
+    text-decoration: none;
+    border-color: #AFE3C0;
+    transition-duration: 0.5s;
+    background-color: #AFE3C0;
+}
+a.contactLink{
+    border-radius: 1px;
+    border-style: solid;
+    width: 300px;
+    align-self: center;
+    font-size: larger;
+    text-decoration: none;
+    color: #000000;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #FAFAFA;
+}
+a.contactLink>img{
+    margin-right: auto;
+}
+form{
+    display:none;
 }
